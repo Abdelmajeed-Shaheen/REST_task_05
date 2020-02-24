@@ -25,6 +25,16 @@ class BookingDetailsSerializer(serializers.ModelSerializer):
 class UpdateBookingSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Booking
+		fields = ['date','passengers']
+
+class UpdateBookingUserSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Booking
+		fields = ['passengers']
+
+class UpdateBookingAdminSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Booking
 		fields = ['date', 'passengers']
 
 
